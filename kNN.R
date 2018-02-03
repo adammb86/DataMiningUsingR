@@ -75,12 +75,13 @@ iris.testLabels <- iris[ind==2, 5]
 print(iris.testLabels)
 
 ####Barulah kita membentuk model dan memprediksi
+iris_pred <- knn(train = iris.training, test = iris.test, cl = iris.trainLabels, k=3)
+iris_pred
+
 iris_prediksi<-c(1.1,2.4,1.2,3.4)
 names(iris_prediksi)<-c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width")
 iris_prediksi<-as.data.frame(iris_prediksi)
 iris_prediksi<-t(iris_prediksi)
-iris_pred <- knn(train = iris.training, test = iris.pred, cl = iris.trainLabels, k=3)
-iris_pred
 iris_pred <- knn(train = iris.training, test = iris_prediksi, cl = iris.trainLabels, k=3)
 iris_pred
 
