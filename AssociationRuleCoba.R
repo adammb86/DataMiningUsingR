@@ -1,4 +1,5 @@
 #Menggunakan dataset Titanic dan melihat strukturnya
+install.packages('dataset')
 Titanic
 str(Titanic)
 
